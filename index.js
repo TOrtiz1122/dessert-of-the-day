@@ -1,7 +1,5 @@
 const Alexa = require('ask-sdk-core');
 
-//const randomDessert = ['tiramisu', 'cheesecake', 'banana pudding', 'boston creme pie']
-
 const CancelAndStopRequestHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
@@ -44,7 +42,6 @@ const HelpIntentHandler = {
     },
 }
 
-
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest'
@@ -64,7 +61,6 @@ const DessertIntentHandler = {
             handlerInput.requestEnvelope.request.intent.name === 'DessertIntent'
     },
     handle(handlerInput) {
-        //const dessert = handlerInput.requestEnvelope.request.intent.slots.dessert.value
         const answer = 'Your dessert of the day is Boston Creme Pie. '
         const reprompt = 'Ask again!'
 
@@ -102,8 +98,6 @@ const SessionEndedRequestHandler = {
             .getResponse()
     },
 }
-
-
 
 const builder = Alexa.SkillBuilders.custom()
 

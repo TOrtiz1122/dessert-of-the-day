@@ -1,5 +1,11 @@
 const Alexa = require('ask-sdk-core');
 
+const randomDessert = ['Boston Creme Pie', 'Ice Cream', 'Cake', 'Cheesecake']
+const randomDessertGenerator = Math.floor(Math.random() * randomDessert.length)
+const randomDessertAnswer = randomDessert[randomDessertGenerator]
+
+//const randomDessert = {['Boston Creme Pie', 'Ice Cream', 'Cake', 'Cheesecake']
+
 const CancelAndStopRequestHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
@@ -60,8 +66,9 @@ const DessertIntentHandler = {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
             handlerInput.requestEnvelope.request.intent.name === 'DessertIntent'
     },
+
     handle(handlerInput) {
-        const answer = 'Your dessert of the day is Boston Creme Pie. '
+        const answer = `Your dessert of the day is ${randomDessertAnswer}. `
         const reprompt = 'Ask again!'
 
 

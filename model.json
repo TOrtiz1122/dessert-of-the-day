@@ -1,0 +1,45 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "dessert of the day",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "DessertIntent",
+                    "slots": [],
+                    "samples": [
+                        "I want a dessert",
+                        "give me a dessert of the day",
+                        "can I have a dessert of the day",
+                        "can I have a dessert",
+                        "may I have a dessert",
+                        "may I have the dessert of the day",
+                        "give me a dessert",
+                        "can I have the dessert of the day",
+                        "give me the dessert of the day"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}

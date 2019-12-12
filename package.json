@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:clean && npm run build:zip",
+    "build:clean": "del dessertoftheday.zip",
+    "build:zip": "C:\\PROGRA~1\\7-Zip\\7z.exe a -tzip dessertoftheday.zip node_modules\\ index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
